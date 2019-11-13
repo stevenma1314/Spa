@@ -7,6 +7,7 @@ import { environment } from './environments/environment';
 if (environment.production) {
   enableProdMode();
 }
-
+// bootstrap mean starting point it excute the application 
+// everyaplication shou have at least one 
 platformBrowserDynamic().bootstrapModule(AppModule)
   .catch(err => console.error(err));

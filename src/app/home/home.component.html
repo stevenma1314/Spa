@@ -1,0 +1,61 @@
+<div>
+  <ngb-carousel *ngIf="movie">
+    <ng-template ngbSlide>
+      <div class="picsum-img-wrapper">
+        <img [src]="movie[0].backdropUrl" alt="Random first slide">
+      </div>
+      <div class="carousel-caption">
+        <h3>{{movie[0].title}}</h3>
+        <p>{{movie[0].overview}}</p>
+      </div>
+      </ng-template>
+      <ng-template ngbSlide>
+        <div class="picsum-img-wrapper">
+          <img [src]="movie[1].backdropUrl" alt="Random first slide">
+        </div>
+        <div class="carousel-caption">
+          <h3>{{movie[1].title}}</h3>
+          <p>{{movie[1].overview}}</p>
+        </div>
+      </ng-template>
+      <ng-template ngbSlide>
+        <div class="picsum-img-wrapper">
+          <img [src]="movie[2].backdropUrl" alt="Random first slide">
+        </div>
+        <div class="carousel-caption">
+          <h3>{{movie[2].title}}</h3>
+          <p>{{movie[2].overview}}</p>
+        </div>
+      </ng-template>
+      <ng-template ngbSlide>
+        <div class="picsum-img-wrapper">
+          <img [src]="movie[3].backdropUrl" alt="Random first slide">
+        </div>
+        <div class="carousel-caption">
+          <h3>{{movie[3].title}}</h3>
+          <p>{{movie[3].overview}}</p>
+        </div>
+      </ng-template>
+      <ng-template ngbSlide>
+        <div class="picsum-img-wrapper">
+          <img [src]="movie[4].backdropUrl" alt="Random first slide">
+        </div>
+        <div class="carousel-caption">
+          <h3>{{movie[4].title}}</h3>
+          <p>{{movie[4].overview}}</p>
+        </div>
+      </ng-template>
+     </ngb-carousel>
+</div>
+
+<div class="container-fluid">
+  <div class="row">
+      <div class="col-6 col-lg-3" *ngFor="let movie of movie">
+    <app-movie-card [movie]='movie' >
+
+    </app-movie-card>
+      </div>
+  </div>
+
+</div>
+
